@@ -6,25 +6,25 @@ export const StyledHero = styled.section`
     width: 100%;
     background-position: center center;
     object-fit: cover;
-    
-    .hero__content{
-        height: 100vh;
+`
+
+export const StyledHeroContent = styled.div`
+    height: 100vh;
         
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        text-align: center;
-        color: var(--white);
+    text-align: center;
+    color: var(--white);
 
-        h1{
-            font-size: 2.5rem;
-        }
+    h1{
+        font-size: 2.5rem;
+    }
 
-        p{
-            margin-top: 1rem;
-        }
+    p{
+        margin-top: 1rem;
     }
 
     .hero__content-cta{
@@ -40,7 +40,7 @@ export const StyledHero = styled.section`
         }
     }
 
-    .hero__form{
+    .hero__content-form{
         padding: 2rem 2rem;
         border-radius: 5px;
         margin-top: 1rem;

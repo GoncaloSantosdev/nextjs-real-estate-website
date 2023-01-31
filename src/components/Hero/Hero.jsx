@@ -1,17 +1,17 @@
-import { StyledHero } from "./styles"
+import { StyledHero, StyledHeroContent } from "./styles"
 
 const Hero = () => {
   return (
     <StyledHero>
         <div className='container'>
-            <div className='hero__content'>
+            <StyledHeroContent>
                 <h1>Find Your Dream Home</h1>
                 <div className='hero__content-cta'>
                     <button className='btn active'>Buy</button>
                     <button className='btn'>Rent</button>
                     <button className='btn'>Sell</button>
                 </div>
-                <form className='hero__form'>
+                <form className='hero__content-form'>
                     <input type="text" placeholder='Enter Keyword'/>
                     <input type="text" placeholder='Property Type'/>
                     <input type="text" placeholder='Location'/>
@@ -19,7 +19,7 @@ const Hero = () => {
                       <button className='btn active'>Search</button>
                     </div>
                 </form>
-            </div>
+            </StyledHeroContent>
         </div>
     </StyledHero>
   )

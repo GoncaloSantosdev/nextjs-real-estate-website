@@ -1,8 +1,8 @@
 import Head from 'next/head';
 // Components
-import { Header, Hero } from '../components';
+import { FeaturedProperties, Header, Hero } from '../components';
 
-export default function Home() {
+export default function Home({ featuredProperties }) {
   return (
     <>
       <Head>
@@ -13,6 +13,17 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
+      <FeaturedProperties featuredProperties={featuredProperties}/>
     </>
   )
+};
+
+export const getServerSideProps = async () => {
+  const { hits } = require('../features/data/properties');
+
+  return{
+    props: { 
+      featuredProperties: hits.slice(0, 6), 
+    }
+  }
 }
