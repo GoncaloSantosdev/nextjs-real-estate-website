@@ -9,23 +9,15 @@ import { IoCloseOutline } from 'react-icons/io5';
 
 const menuData = [
   {
-    title: 'Home',
+    title: 'Properties',
+    path: '/properties'
+  },
+  {
+    title: 'Contact',
     path: '/'
   },
   {
-    title: 'About',
-    path: '/'
-  },
-  {
-    title: 'Property',
-    path: '/'
-  },
-  {
-    title: 'Blog',
-    path: '/'
-  },
-  {
-    title: 'Contact Us',
+    title: '(800) 555 555',
     path: '/'
   },
 ]
@@ -60,6 +52,7 @@ const Header = () => {
                 </Link>
               </li>
             ))}
+            <button className='btn active'>Create Listing</button>
           </div>
         </StyledNav>
       </div>

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 // Components
-import { FeaturedProperties, Header, Hero } from '../components';
+import { Ads, FeaturedProperties, Hero, MeetTheTeam, Testemonials } from '../components';
+import DefaultLayout from '../layouts/DefaultLayout';
 
 export default function Home({ featuredProperties }) {
   return (
@@ -11,14 +12,20 @@ export default function Home({ featuredProperties }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Hero />
-      <FeaturedProperties featuredProperties={featuredProperties}/>
+      
+      <DefaultLayout>
+        <Hero />
+        <FeaturedProperties featuredProperties={featuredProperties}/>
+        <MeetTheTeam />
+        <Ads />
+        <Testemonials />
+      </DefaultLayout>
+      
     </>
   )
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const { hits } = require('../features/data/properties');
 
   return{
@@ -26,4 +33,4 @@ export const getServerSideProps = async () => {
       featuredProperties: hits.slice(0, 6), 
     }
   }
-}
+};

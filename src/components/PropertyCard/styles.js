@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledPropertyCardContent = styled.div`
      background-color: var(--white);
+     width: 380px;
      margin-top: -6px;
      margin-bottom: 3rem;
      padding: 2rem;
@@ -13,6 +14,7 @@ export const StyledPropertyCardContent = styled.div`
 
      .propertyNameAddress{
         margin-top: 1rem;
+        
         p{
             font-size: 0.875rem;
             margin-top: .2rem;

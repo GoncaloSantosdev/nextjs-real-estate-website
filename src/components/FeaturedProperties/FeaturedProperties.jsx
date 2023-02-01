@@ -8,9 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 // Styles
 import { StyledFeaturedPropertiesSlider } from "./styles";
+import { useIsDesktop } from "@/src/features/hooks/useIsDesktop";
 
 const FeaturedProperties = ({ featuredProperties }) => {
-  // console.log(featuredProperties);
+  const { isDesktop } = useIsDesktop();
   
   return (
     <section className='featuredProperties'>
@@ -19,7 +20,7 @@ const FeaturedProperties = ({ featuredProperties }) => {
         
         <StyledFeaturedPropertiesSlider>
           <Swiper
-          slidesPerView={3}
+          slidesPerView={isDesktop ? 3 : 1}
           spaceBetween={30}
           loop={true}
           loopFillGroupWithBlank={true}
@@ -28,6 +29,7 @@ const FeaturedProperties = ({ featuredProperties }) => {
           pagination={{ dynamicBullets: true }}
           modules={[Autoplay, Pagination]}
           className="mySwiper"
+
         >
           {featuredProperties.map((property) => (
             <SwiperSlide key={property.id}>

@@ -9,14 +9,14 @@ import { FaBed } from 'react-icons/fa';
 import { GiBathtub } from 'react-icons/gi';
 import { Md6FtApart } from 'react-icons/md';
 
-// Truncate
+// Truncate String 
 const truncate = (str, length) => {
     return str.length > length
     ? `${str.substr(0, length)}...`
     : str;
 }
 
-const PropertyCard = ({ property }) => { 
+const PropertyCard = (property) => { 
   const { address, coverPhoto, propertyType, price, title, rooms, baths, purpose, sqSize, externalID } = usePropertyFormat(property);
 
   return (

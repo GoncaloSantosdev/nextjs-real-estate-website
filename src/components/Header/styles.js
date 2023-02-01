@@ -2,21 +2,17 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
     width: 100%;
-    position: absolute;
 `
 
 export const StyledNav = styled.nav`
-    margin-top: 1.875rem;
-    padding: 1.875rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background-color: #EDEDED;
-    border-radius: 5px;
+    padding: 1.2rem 0;
 
     @media screen and (min-width: 960px) {
-        padding: 1.875rem 2rem;
+        padding: 1.3rem 0rem;
     }
 
     .header__logo{
@@ -45,7 +41,7 @@ export const StyledNav = styled.nav`
 
     .header__menu-mobile{
         position: absolute;
-        top: 8rem;
+        top: 5rem;
         right: 1.5rem;
         padding: 1rem;
 
@@ -56,13 +52,17 @@ export const StyledNav = styled.nav`
 
         li{
             &:not(:first-child){
-                margin-top: 0.25rem;
+                margin-top: 1rem;
             }
         }
 
         a{
             color: var(--blue);
             font-size: 0.9rem;
+        }
+
+        button{
+            margin-top: 1rem;
         }
 
         @media only screen and (min-width: 960px) {
@@ -75,6 +75,7 @@ export const StyledNav = styled.nav`
         
         @media screen and (min-width: 960px) {
             display: flex;
+            align-items: center;
             
             li{
                 &:not(:last-child){
