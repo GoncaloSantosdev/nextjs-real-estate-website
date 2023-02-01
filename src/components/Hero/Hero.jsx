@@ -5,7 +5,7 @@ const Hero = () => {
     <StyledHero>
         <div className='container'>
             <StyledHeroContent>
-                <h1>Find Your Dream Home</h1>
+                <h1>Find Your Dream Home!</h1>
                 <div className='hero__content-cta'>
                     <button className='btn active'>Buy</button>
                     <button className='btn'>Rent</button>

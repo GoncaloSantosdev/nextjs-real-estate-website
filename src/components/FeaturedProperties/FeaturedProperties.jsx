@@ -31,7 +31,7 @@ const FeaturedProperties = ({ featuredProperties }) => {
           className="mySwiper"
 
         >
-          {featuredProperties.map((property) => (
+          {featuredProperties?.map((property) => (
             <SwiperSlide key={property.id}>
               <PropertyCard property={property}/>
             </SwiperSlide>

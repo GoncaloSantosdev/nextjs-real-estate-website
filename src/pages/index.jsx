@@ -2,8 +2,12 @@ import Head from 'next/head';
 // Components
 import { Ads, FeaturedProperties, Hero, MeetTheTeam, Testemonials } from '../components';
 import DefaultLayout from '../layouts/DefaultLayout';
+// API CALL
+import { getProperties } from '../api/getProperties';
 
 export default function Home({ featuredProperties }) {
+  console.log(featuredProperties);
+
   return (
     <>
       <Head>
@@ -26,11 +30,11 @@ export default function Home({ featuredProperties }) {
 };
 
 export const getStaticProps = async () => {
-  const { hits } = require('../features/data/properties');
+  const properties = await getProperties(6);
+  // const { hits } = require('../features/data/properties');
 
   return{
-    props: { 
-      featuredProperties: hits.slice(0, 6), 
-    }
+    props: { featuredProperties: properties }
+      // featuredProperties: hits.slice(0, 6), 
   }
 };

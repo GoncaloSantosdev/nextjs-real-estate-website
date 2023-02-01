@@ -3,6 +3,7 @@ import DefaultLayout from "@/src/layouts/DefaultLayout";
 import { PropertyCard } from "@/src/components";
 // Styles
 import styled from "styled-components";
+import { getProperties } from "@/src/api/getProperties";
 
 const Properties = ({ properties }) => {
 
@@ -27,13 +28,16 @@ export default Properties;
 
 
 export const getStaticProps = async () => {
-  const { hits } = require('../../features/data/properties');
+  // const { hits } = require('../../features/data/properties');
+  const properties = await getProperties(25);
 
   return{
-    props: { properties: hits}
+    props: { properties: properties }
+    // { properties: hits}
   }
 };
 
+// Styles
 export const StyledPropertyList = styled.div`
     margin: 5rem 0;
     display: flex;

@@ -13,6 +13,7 @@ import { FaBed } from 'react-icons/fa';
 import { GiBathtub } from 'react-icons/gi';
 import { Md6FtApart } from 'react-icons/md';
 import { IoMdPricetag } from 'react-icons/io';
+import { getProperty } from '@/src/api/getProperty';
 
 const SingleProperty = ({ property }) => {
   const {  
@@ -98,13 +99,17 @@ const SingleProperty = ({ property }) => {
 export default SingleProperty;
 
 export const getServerSideProps = async (context) => {
-    const property = require('../../features/data/property');
+    const { id } = context.query;
+    const property = await getProperty(id);
+    
+    // const property = require('../../features/data/property');
 
     return{
-        props: { property }
+        props: { property: property }
     }
 }
 
+// Styles
 export const StyledSingleProperty = styled.section`
     background-color: #e7e7e7;
 `
