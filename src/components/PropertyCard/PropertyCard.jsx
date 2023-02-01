@@ -16,7 +16,7 @@ const truncate = (str, length) => {
     : str;
 }
 
-const PropertyCard = (property) => { 
+const PropertyCard = ({ property }) => { 
   const { address, coverPhoto, propertyType, price, title, rooms, baths, purpose, sqSize, externalID } = usePropertyFormat(property);
 
   return (
