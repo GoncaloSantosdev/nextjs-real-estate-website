@@ -24,12 +24,11 @@ a{
   text-decoration: none;
 }
 
-ul, li{
-  list-style: none;
-}
 
-input, button{
+
+input, button, textarea{
   font-family: 'Poppins', sans-serif;
+  resize: none;
 }
 
 button{

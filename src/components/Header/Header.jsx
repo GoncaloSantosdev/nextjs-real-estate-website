@@ -14,7 +14,7 @@ const menuData = [
   },
   {
     title: 'Contact',
-    path: '/'
+    path: '/contact'
   },
   {
     title: '(800) 555 555',

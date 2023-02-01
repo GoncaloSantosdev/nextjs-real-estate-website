@@ -51,6 +51,7 @@ export const StyledNav = styled.nav`
         z-index: 99;
 
         li{
+            list-style: none;
             &:not(:first-child){
                 margin-top: 1rem;
             }
@@ -78,6 +79,8 @@ export const StyledNav = styled.nav`
             align-items: center;
             
             li{
+                list-style: none;
+                
                 &:not(:last-child){
                     margin-right: 2rem;
                 }
